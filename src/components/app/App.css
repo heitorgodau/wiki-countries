@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.capital-title {
+  width: 30%;
+}
+
+.borders-list {
+  list-style: none;
+  margin-left: -40px;
+}
