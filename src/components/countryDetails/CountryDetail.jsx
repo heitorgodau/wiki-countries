@@ -9,12 +9,12 @@ const CountryDetail = (props) => {
   
   const getCountry = (id) => countriesList.find(oneCountry => oneCountry.cca3 === id);
 
-  const foundCountry = getCountry(id, 10);
+  const foundCountry = getCountry(id);
 
   const getBorders = () => {
     if (foundCountry.borders.length === 0) return <li>{`${foundCountry.name.common} has no borders with any country`}</li>
     return foundCountry.borders.map((border) => {
-      const { flag, name } = getCountry(border, 10);
+      const { flag, name } = getCountry(border);
       return <li><Link to={`/${border}`}>{`${flag} ${name.common}`}</Link></li>
 
     })
